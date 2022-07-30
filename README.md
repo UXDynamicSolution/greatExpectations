@@ -1,13 +1,16 @@
 # TUTORIAL GREAT EXPECTATIONS
 
 #instalar great expectations
+
 pip install great_expectations
 
 
 #inicializar repositorio
+
 great_expectations init
 
 #- Run `great_expectations datasource new` to connect to your data.
+
 great_expectations datasource new
 
 
