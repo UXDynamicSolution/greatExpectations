@@ -2,16 +2,15 @@
 
 #instalar great expectations
 
-'pip install great_expectations'
+`pip install great_expectations`
 
 
 #inicializar repositorio
-
-great_expectations init
+`great_expectations init`
 
 #- Run `great_expectations datasource new` to connect to your data.
 
-great_expectations datasource new
+`great_expectations datasource new`
 
 
 #SELECCIONAR ORIGEN DE DATOS
@@ -29,14 +28,14 @@ What are you processing your files with?
 SE DESPLIEGA UN JUPYTER NOTEBOOK:
 
 CREAMOS UN NUEVO DATASOURCE Y EJECUTAMOS LAS CELDAS EN EL NOTEBOOK
-datasource_name = "prueba_ds"
+`datasource_name = "prueba_ds"`
 
 VALIDAR SI EXISTE EL DATASOURCE
-great_expectations datasource list
+`great_expectations datasource list`
 
 
 AHORA CREAREMOS LAS REGLAS DE CALIDAD, GENERAMOS LA SUITE QUE ES LA AGRUPACION DE EXPECTATIONS
-great_expectations --v3-api suite new --no-jupyter
+`great_expectations --v3-api suite new --no-jupyter`
 
 
 Nos entrega 3 opciones de generacion de expectativas
@@ -54,21 +53,18 @@ Seleccionamos la opcion 3 para que genere automaticamente las reglas de calidad 
 
 
 # EDITAR REGLAS SUITE GREAT EXPECTATIONS
-great_expectations --v3-api suite edit VAPORESSN.csv.warning
+`great_expectations --v3-api suite edit VAPORESSN.csv.warning`
 
 podemos ir editando las reglas, cambiando parámetros, orden, etc...
-
 
 ENCONTRAMOS REGLAS
 https://legacy.docs.greatexpectations.io/en/0.12.0/reference/glossary_of_expectations.html
 
-
 GENERAR DOCUMENTACION
-great_expectations --v3-api docs build
-
+`great_expectations --v3-api docs build`
 
 COMO APLICAR UN CONJUNTO DE REGLAS DE CALIDAD DE DATOS A UN DATASET
-great_expectations --v3-api checkpoint new myckp --no-jupyter
+`great_expectations --v3-api checkpoint new myckp --no-jupyter`
 
 EJECUTAR UN CHECKPOINT: TOMA LAS REGLAS DE CALIDAD Y LO APLICA AL DATASET
-great_expectations --v3-api checkpoint run myckp
+`great_expectations --v3-api checkpoint run myckp`
