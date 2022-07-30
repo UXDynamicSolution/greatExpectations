@@ -2,7 +2,7 @@
 
 #instalar great expectations
 
-pip install great_expectations
+'pip install great_expectations'
 
 
 #inicializar repositorio
